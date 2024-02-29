@@ -1,4 +1,5 @@
 using ControleDeContatos.Data;
+using ControleDeContatos.Interfaces;
 using ControleDeContatos.Repository;
 using Microsoft.EntityFrameworkCore;
 
@@ -31,6 +32,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Login}/{action=Index}/{id?}");
 
 app.Run();
