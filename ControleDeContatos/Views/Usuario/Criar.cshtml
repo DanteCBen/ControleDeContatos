@@ -32,18 +32,20 @@
 
     <div class="mb-3">
         <label for="perfil">Perfil</label>
-        <select asp-for="Perfil" class="form-control">
-            <option value="0">Selecione</option>
+        <select asp-for="@Model.Perfil" class="form-control">
+            <option value="">Selecione</option>
             <option value="@PerfilEnum.Admin">Administrador</option>
             <option value="@PerfilEnum.Padrao">Padrão</option>
         </select>
+        @Html.ValidationMessageFor(usuario => usuario.Perfil)
+
     </div>
 
     <div class="mb-3">
         <label for="senha">Senha</label>
         <input type="password" class="form-control" id="senha" placeholder="Digite a senha do usuário"
-            asp-for="@Model.Login">
-        @Html.ValidationMessageFor(usuario => usuario.Login)
+            asp-for="@Model.Senha">
+        @Html.ValidationMessageFor(usuario => usuario.Senha)
     </div>
 
     <button type="submit" class="btn btn-primary">Adicionar</button>
