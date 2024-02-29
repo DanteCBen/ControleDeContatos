@@ -1,5 +1,5 @@
-﻿using ControleDeContatos.Models;
-using ControleDeContatos.Repository;
+﻿using ControleDeContatos.Interfaces;
+using ControleDeContatos.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ControleDeContatos.Controllers;
@@ -46,7 +46,8 @@ public class ContatoController : Controller
             if (apagado)
             {
                 TempData["MensagemSucesso"] = "Contato Apagado com Sucesso!!!";
-            } else
+            }
+            else
             {
                 TempData["MensagemError"] = "Ops, não conseguimos apagar seu contato!";
             }
@@ -59,7 +60,7 @@ public class ContatoController : Controller
             return RedirectToAction("Ïndex");
         }
 
-       
+
     }
 
     [HttpPost]
