@@ -3,7 +3,6 @@ using ControleDeContatos.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ControleDeContatos.Controllers;
-
 public class LoginController(IUsuarioRepository repository, ISessao sessao) : Controller
 {
     private readonly IUsuarioRepository _repository = repository;
