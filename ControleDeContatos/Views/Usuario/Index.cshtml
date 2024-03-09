@@ -1,3 +1,4 @@
+@using ControleDeContatos.Enums
 @model List<UsuarioModel>
 @{
     ViewData["Title"] = "Listagem de Usuário";
@@ -49,7 +50,7 @@
                     <tr>
                         <th scope="row">@usuario.Id</th>
                         <td>@usuario.Nome</td>
-                        <td>@(usuario.Perfil.ToString() == "Administrador" ? "Admin" : "Padrão")</td>
+                        <td>@(usuario.Perfil == PerfilEnum.Admin ? "Admin" : "Padrão")</td>
                         <td>@usuario.Login</td>
                         <td>@usuario.Email</td>
                         <td>@usuario.DataDeCadastro</td>
