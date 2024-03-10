@@ -11,6 +11,8 @@ public class UsuarioRepository(BancoContext bancoContext) : IUsuarioRepository
     {
         usuario.DataDeCadastro = DateTime.Now;
 
+        usuario.SetHashPassword();
+
         _bancoContext.Usuarios.Add(usuario);
         _bancoContext.SaveChanges();
 
