@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using ControleDeContatos.Enums;
+using ControleDeContatos.Helper;
 
 namespace ControleDeContatos.Models;
 
@@ -24,6 +25,6 @@ public class UsuarioModel
 
     [Required(ErrorMessage = "Informe o perfil do usuário.")]
     public PerfilEnum? Perfil { get; set; }
-    public bool SenhaValida(string senha) => Senha == senha;
-
+    public bool SenhaValida(string senha) => Senha == senha.GerarHash();
+    public void SetHashPassword() => Senha = Senha.GerarHash();
 }
