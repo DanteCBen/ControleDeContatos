@@ -1,5 +1,4 @@
-﻿@model ContatoModel
-@{
+﻿@{
     ViewData["Title"] = "Editar Contato";
 }
 
@@ -7,26 +6,22 @@
     <h1 class="display-4">Editar Contato</h1>
 </div>
 
-<form asp-controller="Contato" asp-action="Atualizar" method="post"> 
-    <input type="hidden" asp-for="Id"/>
+<form>
     <div class="mb-3">
         <label for="nome">Nome</label>
-        <input type="text" class="form-control" id="nomeDeContato" placeholder="Digite o nome do contato" asp-for="Nome">
-        @Html.ValidationMessageFor(msg => msg.Nome)
+        <input type="text" class="form-control" id="nomeDeContato" placeholder="Digite o nome do contato">
     </div>
 
     <div class="mb-3">
         <label for="email">Email</label>
-        <input type="email" class="form-control" id="email" placeholder="Digite o email do contato" asp-for="Email">
-        @Html.ValidationMessageFor(msg => msg.Email)
+        <input type="email" class="form-control" id="email" placeholder="Digite o email do contato">
     </div>
 
     <div class="mb-3">
         <label for="celular">Celular</label>
-        <input type="tel" class="form-control" id="celular" placeholder="Digite o número do contato" asp-for="Celular">
-        @Html.ValidationMessageFor(msg => msg.Celular)
+        <input type="tel" class="form-control" id="celular" placeholder="Digite o número do contato">
     </div>
 
-    <button type="submit" class="btn btn-primary" asp-controller="Contato" asp-action="Atualizar">Alterar</button>
-    <a class="btn btn-secondary" asp-controller="Contato" asp-action="Index" role="button">Cancelar</a>
+    <button type="submit" class="btn btn-primary">Alterar</button>
+    <a class="btn btn-secondary" asp-controller="Contato" asp-action="Index" role="button">Voltar</a>
 </form>
