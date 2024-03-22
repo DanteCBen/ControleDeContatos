@@ -1,5 +1,6 @@
 ﻿using ControleDeContatos.Data;
 using ControleDeContatos.Models;
+using ControleDeContatos.Interfaces;
 
 namespace ControleDeContatos.Repository;
 

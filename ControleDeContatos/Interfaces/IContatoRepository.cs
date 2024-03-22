@@ -1,6 +1,6 @@
 ﻿using ControleDeContatos.Models;
 
-namespace ControleDeContatos.Repository;
+namespace ControleDeContatos.Interfaces;
 
 public interface IContatoRepository
 {

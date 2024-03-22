@@ -1,6 +1,6 @@
-﻿$(document).ready(function () 
+﻿function getDataTable(idElement)
 {
-    $('#tabelacontatos').DataTable({
+    return $(idElement).DataTable({
         "ordering": true,
         "paging": true,
         "searching": true,
@@ -28,6 +28,12 @@
             }
         }
     });
+}
+
+$(document).ready(function () 
+{
+    getDataTable('#tabelausuarios')
+    getDataTable('#tabelacontatos')
 });
 
 $('.close-alert').click(() =>

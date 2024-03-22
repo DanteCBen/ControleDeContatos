@@ -39,7 +39,6 @@ body {
   height: 30px;
 }
 
-th,
-tr {
-  text-align: center;
+th {
+  text-align: center !important;
 }
